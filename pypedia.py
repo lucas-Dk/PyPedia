@@ -53,7 +53,8 @@ else:
 					print("Adicionando sua pesquisa no arquivo Pesquisas.txt...")
 					savefiles.adicionar(arquivo, busca)
 					time.sleep(0.5)
-					print("Pesquisa adicionada!")
+					print("\n\033[1;95mPesquisa adicionada!")
+					print("E salva no arquivo Pesquisas.txt\033[m\n")
 				nova_busca = str(input("Deseja fazer uma nova busca? Y ou enter para SIM ou N para NÃO: ")).upper()
 				while nova_busca.strip() not in "Y" and nova_busca.strip() not in "N":
 					nova_busca = str(input("Deseja fazer uma nova busca? Y ou enter para SIM ou N para NÃO: ")).upper()
