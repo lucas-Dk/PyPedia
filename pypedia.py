@@ -13,7 +13,7 @@ try:
 except:
 	print("\033[1;31m       :(     ")
 	print("Erro ao entrar no arquivo")
-	print("Digite > pip install requirements.txt")
+	print("Digite > pip install -r requirements.txt")
 	print("E tente novamente!\033[m")
 else: 
 	if not savefiles.existe(arquivo):
@@ -50,7 +50,10 @@ ______                          _  _
 
              V 1.1\033[m
 
-
+OBS: Ele busca por palavras chaves
+exemplo: Você quer buscar por dinossauros
+então você digita dinossauros
+--------------------------------------------
 [1] - Fazer uma pesquisa
 [x] - Sair
 """)
