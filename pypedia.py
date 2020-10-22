@@ -70,7 +70,7 @@ ______                          _  _
 							else:
 								print(busca + '\n')
 								print("Adicionando sua pesquisa no arquivo Pesquisas.txt...")
-								savefiles.adicionar(arquivo, busca)
+								savefiles.adicionar(nome=arquivo, titulo_pesquisa=pesquisa, pesquisa=busca)
 								time.sleep(0.5)
 								print("\n\033[1;95mPesquisa adicionada!")
 								print("E salva no arquivo Pesquisas.txt\033[m\n")
