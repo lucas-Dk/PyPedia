@@ -38,36 +38,68 @@ else:
 		os.system("clear")
 		wikipedia.set_lang("pt")
 		while True:
-			print("========= PyPedia =========")
-			print()
+			print("""\033[1;95m
+______                          _  _        
+| ___ \                        | |(_)       
+| |_/ / _   _  _ __    ___   __| | _   __ _ 
+|  __/ | | | || '_ \  / _ \ / _` || | / _` |
+| |    | |_| || |_) ||  __/| (_| || || (_| |
+\_|     \__, || .__/  \___| \__,_||_| \__,_|
+         __/ || |                           
+        |___/ |_|                          
 
-			pesquisa = input("Sobre o que deseja pesquisar: ").lower().strip()
+             V 1.1\033[m
 
-			if pesquisa.isalnum():
-				print("Iniciando busca...\n")
-				time.sleep(0.6)
-				try:
-					busca = wikipedia.summary(pesquisa)
-				except:
-					print("Não foi possivel conectar a wikipedia, tente novamente!")
-				else:
-					print(busca + '\n')
-					print("Adicionando sua pesquisa no arquivo Pesquisas.txt...")
-					savefiles.adicionar(arquivo, busca)
-					time.sleep(0.5)
-					print("\n\033[1;95mPesquisa adicionada!")
-					print("E salva no arquivo Pesquisas.txt\033[m\n")
-				nova_busca = str(input("Deseja fazer uma nova busca? Y ou enter para SIM ou N para NÃO: ")).upper()
-				while nova_busca.strip() not in "Y" and nova_busca.strip() not in "N":
-					nova_busca = str(input("Deseja fazer uma nova busca? Y ou enter para SIM ou N para NÃO: ")).upper()
-				if nova_busca == "" or nova_busca == "Y":
-					print("Voltando...")
-					time.sleep(0.6)
-					os.system("clear")
+
+[1] - Fazer uma pesquisa
+[x] - Sair
+""")
+			choice = input("Faça sua escolha: ")
+			if choice.isnumeric():
+				choice = int(choice)
+				if choice == 1:
+					while True:
+						pesquisa = input("Sobre o que deseja pesquisar: ").lower().strip()
+						if pesquisa.isalnum():
+							print("Iniciando busca...\n")
+							time.sleep(0.6)
+							try:
+								busca = wikipedia.summary(pesquisa)
+							except:
+								print("Não foi possivel conectar a wikipedia, tente novamente!")
+							else:
+								print(busca + '\n')
+								print("Adicionando sua pesquisa no arquivo Pesquisas.txt...")
+								savefiles.adicionar(arquivo, busca)
+								time.sleep(0.5)
+								print("\n\033[1;95mPesquisa adicionada!")
+								print("E salva no arquivo Pesquisas.txt\033[m\n")
+							nova_busca = str(input("Deseja fazer uma nova busca? Y ou enter para SIM ou N para NÃO: ")).upper()
+							while nova_busca.strip() not in "Y" and nova_busca.strip() not in "N":
+								nova_busca = str(input("Deseja fazer uma nova busca? Y ou enter para SIM ou N para NÃO: ")).upper()
+							if nova_busca == "" or nova_busca == "Y":
+								print("Voltando...")
+								time.sleep(0.6)
+								os.system("clear")
 				
-				elif nova_busca == "N":
+							elif nova_busca == "N":
+								print("Saindo...")
+								time.sleep(1)
+								sys.exit()
+						else:
+							print("Tente tirar os espaços!")
+
+				else:
+					print("Opção inválida!")
+					time.sleep(0.7)
+					os.system("clear")
+			else:
+				if choice == "X" or choice == "x":
 					print("Saindo...")
 					time.sleep(1)
 					sys.exit()
-			else:
-				print("Digite letras, numeros ou os dois juntos!")
+				else:
+					print("Opção inválida!")
+					time.sleep(0.7)
+					os.system("clear")
+# Fim do script
