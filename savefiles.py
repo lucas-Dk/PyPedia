@@ -17,14 +17,14 @@ def criar(nome):
 	else:
 		print("Arquivo criado!")
 		file.close()
-def adicionar(nome, pesquisa):
+def adicionar(nome, titulo_pesquisa, pesquisa):
 	try:
 		file = open(nome, 'at')
 	except:
 		print("impossível adicionar a pesquisa ao arquivo!")
 	else:
 		try:
-			file.write("\nPesquisa:\n\n{} \n".format(pesquisa))
+			file.write("\nPesquisa sobre {}:\n\n{} \n".format(titulo_pesquisa, pesquisa))
 		except:
 			print("Pesquisa não adicionada")
 			file.close()
