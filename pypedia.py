@@ -30,10 +30,10 @@ else:
 		print("\033[1;31mERROR: VOCÊ NÃO ESTÁ CONECTADO A INTERNET NO MOMENTO :( \033[m")
 	else:
 		os.system("clear")
-		print("Crregando PyPédia...")
+		print("\033[1;31mCarregando PyPédia...\033[m")
 		for loading in tqdm(range(1, 100 + 1)):
 			time.sleep(0.1)
-		print("PyPédia carregado, faça sua busca!")
+		print("\033[1;32mPyPédia carregado, faça sua busca!\033[m")
 		time.sleep(1)
 		os.system("clear")
 		wikipedia.set_lang("pt")
