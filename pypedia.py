@@ -19,7 +19,7 @@ else:
 	if not savefiles.existe(arquivo):
 		savefiles.criar(arquivo)
 		os.system("clear")
-	else:
+	if savefiles.existe == True:
 		pass
 
 	try:
