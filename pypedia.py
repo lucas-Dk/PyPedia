@@ -1,5 +1,7 @@
-# Importações 
+# Arquivo a ser gerado
 arquivo = 'Pesquisas.txt'
+
+# Importações
 try:
 	import wikipedia
 	import time
