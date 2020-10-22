@@ -11,10 +11,10 @@ try:
 	import urllib.request
 	from tqdm import tqdm
 except:
-	print("       :(     ")
+	print("\033[1;31m       :(     ")
 	print("Erro ao entrar no arquivo")
 	print("Digite > pip install requirements.txt")
-	print("E tente novamente!")
+	print("E tente novamente!\033[m")
 else: 
 	if not savefiles.existe(arquivo):
 		savefiles.criar(arquivo)
