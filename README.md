@@ -1,6 +1,6 @@
 # PyPedia
 
-> PyPédiaé um script que faz buscas na wikipedia
+> PyPédia é um script que faz buscas na wikipedia
 
 # Como usar:
 
