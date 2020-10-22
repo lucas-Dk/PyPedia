@@ -6,7 +6,7 @@ def existe(nome):
 	except:
 		print("Arquivo não existe!")
 	else:
-		print('Aquivo já existe!')
+		return True
 		file.close()
 
 def criar(nome):
