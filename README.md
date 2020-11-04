@@ -1,5 +1,9 @@
 # Atualização chegou:
 
+- Data:
+
+- 04/11/2020
+
 > Mundanças:
 
 - Melhorias no desempenho
