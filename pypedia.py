@@ -46,24 +46,24 @@ ______                          _  _
 | |    | |_| || |_) ||  __/| (_| || || (_| |
 \_|     \__, || .__/  \___| \__,_||_| \__,_|
          __/ || |                           
-        |___/ |_|                          
+        |___/ |_|
 
-             V 1.1\033[m
-
-OBS: Ele busca por palavras chaves
-exemplo: Você quer buscar por dinossauros
-então você digita dinossauros
+             V 2.0\033[m
+ 
+\033[1;94mby: Lucas Silva (lucas-DK)             \033[m
 --------------------------------------------
-[1] - Fazer uma pesquisa
-[x] - Sair
+\033[1;31m[\033[m\033[1;32m1\033[m\033[1;31m]\033[m - Fazer uma pesquisa
+\033[1;31m[\033[m\033[1;32m2\033[m\033[1;31m]\033[m - Ler todas as pesquisas salvas
+\033[1;31m[\033[m\033[1;32mx\033[m\033[1;31m]\033[m - Sair
 """)
 			choice = input("Faça sua escolha: ")
 			if choice.isnumeric():
 				choice = int(choice)
 				if choice == 1:
 					while True:
-						pesquisa = input("Sobre o que deseja pesquisar: ").lower().strip()
-						if pesquisa.isalnum():
+						pesquisa = input("Sobre o que deseja pesquisar: ").lower()
+						if pesquisa:
+							
 							print("Iniciando busca...\n")
 							time.sleep(0.6)
 							try:
@@ -77,20 +77,35 @@ então você digita dinossauros
 								time.sleep(0.5)
 								print("\n\033[1;95mPesquisa adicionada!")
 								print("E salva no arquivo Pesquisas.txt\033[m\n")
-							nova_busca = str(input("Deseja fazer uma nova busca? Y ou enter para SIM ou N para NÃO: ")).upper()
-							while nova_busca.strip() not in "Y" and nova_busca.strip() not in "N":
-								nova_busca = str(input("Deseja fazer uma nova busca? Y ou enter para SIM ou N para NÃO: ")).upper()
+								print("Para fazer uma nova busca: Y ou Enter")
+								print("Para retornar ao menu: R")
+								print("Para sair do programa: S\n")
+							nova_busca = str(input(">>>> ")).upper()
+							while nova_busca.strip() not in "Y" and nova_busca.strip() not in "R" and nova_busca not in "S":
+								nova_busca = str(input(">>>> ")).upper()
 							if nova_busca == "" or nova_busca == "Y":
 								print("Voltando...")
 								time.sleep(0.6)
 								os.system("clear")
 				
-							elif nova_busca == "N":
+							elif nova_busca == "R":
+								print("Voltando...")
+								os.system("clear")
+								time.sleep(1)
+								break
+							elif nova_busca == "S":
 								print("Saindo...")
 								time.sleep(1)
 								sys.exit()
-						else:
-							print("Tente tirar os espaços!")
+				elif choice == 2:
+					savefiles.leitura(arquivo)
+					back = input("\nEnter para voltar ao menu ou X/qualquer coisa para sair... ")
+					if back == "X" or back == "x" or back != "":
+						print("Saindo...")
+						time.sleep(1)
+						sys.exit()
+					if back == "":
+						os.system("clear")
 
 				else:
 					print("Opção inválida!")
