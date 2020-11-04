@@ -1,3 +1,12 @@
+# Atualização chegou:
+
+> Mundanças:
+
+- Melhorias no desempenho
+
+- Opção de ler as pesquisas salvas no arquivo, dentro do script adicionada
+
+
 # PyPedia
 
 > PyPédia é um script que faz buscas na wikipedia
