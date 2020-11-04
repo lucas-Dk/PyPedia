@@ -4,12 +4,7 @@
 
 # Como usar:
 
-> O script faz pesquisas por palavras chaves
-
-> exemplo:
-
-* quero pesquisar sobre carro
-* então eu digito apenas a palavra carro
+use como se fosse usar dentro do google, porém é no seu terminal
 
 # Clone meu script e o instale:
 
@@ -23,6 +18,10 @@
 
 
 # Como posso acessar as buscas depois:
+
+> Selecione a opção 2 no script
+
+ou então:
 
 > O script gera um arquivo.txt chamado Pesquisas.txt na própria pasta
 
