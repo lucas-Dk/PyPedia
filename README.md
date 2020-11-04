@@ -8,7 +8,7 @@
 
 - Melhorias no desempenho
 
-- Opção de ler as pesquisas salvas no arquivo, dentro do script adicionada
+- Opção de ler as pesquisas salvas no arquivo, dentro do script, adicionada
 
 
 # PyPedia
