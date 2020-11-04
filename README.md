@@ -1,6 +1,6 @@
 # Atualização chegou:
 
-- Data:
+> Data:
 
 - 04/11/2020
 
