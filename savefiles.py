@@ -24,10 +24,25 @@ def adicionar(nome, titulo_pesquisa, pesquisa):
 		print("impossível adicionar a pesquisa ao arquivo!")
 	else:
 		try:
-			file.write("\nPesquisa sobre {}:\n\n{} \n".format(titulo_pesquisa, pesquisa))
+			file.write("\nPesquisa sobre {}:\n{} \n".format(titulo_pesquisa, pesquisa))
 		except:
 			print("Pesquisa não adicionada")
 			file.close()
 		else:
 			pass
+def leitura(nome):
+  try:
+    file = open(nome)
+  except:
+    print("Erro ao abrir o arquivo!")
+  else:
+    try:
+      ler = file.readlines()
+    except:
+      print("Impossível ler o arquivo!")
+    else:
+      for x in ler:
+        print(x)
+      
 
+    
