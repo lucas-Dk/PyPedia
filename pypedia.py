@@ -186,3 +186,5 @@ desejar, desde que a extensão seja .txt
 
 faça bom uso :)
  """)
+
+# by: lucas-DK
